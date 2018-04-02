@@ -1,0 +1,6 @@
+./adb devices
+./adb shell
+./adb pull /mnt/sdcard/Sessions/14442D1DF8A9310_Thu_Feb_15_22-00_2018_PST
+gunzip data/*
+cat 14442D57*/data/1_android.sensor.accelerometer.data.csv > merged_shr.csv
+cat 14442D1DF8A9310*/data/1_android.sensor.accelerometer.data.csv > merged_jay.csv

@@ -1,0 +1,507 @@
+> list.dirs(path = ".", full.names = TRUE, recursive = FALSE)
+ [1] "./.git"                                      "./.idea"                                    
+ [3] "./14442D1DF8A9310_Mon_Feb_19_15-48_2018_PST" "./14442D1DF8A9310_Mon_Feb_19_16-09_2018_PST"
+ [5] "./14442D1DF8A9310_Mon_Feb_19_16-13_2018_PST" "./14442D1DF8A9310_Thu_Feb_15_22-00_2018_PST"
+ [7] "./14442D1DF8A9310_Tue_Feb_27_11-18_2018_PST" "./14442D1DF8A9310_Tue_Feb_27_11-20_2018_PST"
+ [9] "./14442D1DF8A9310_Tue_Feb_27_11-21_2018_PST" "./14442D1DF8A9310_Tue_Feb_27_11-23_2018_PST"
+[11] "./14442D1DF8A9310_Wed_Feb_21_04-55_2018_PST" "./14442D1DF8A9310_Wed_Feb_21_23-12_2018_PST"
+[13] "./14442D1DF8A9310_Wed_Feb_21_23-16_2018_PST" "./14442D1DF8A9310_Wed_Feb_21_23-23_2018_PST"
+[15] "./14442D1DF8A9310_Wed_Feb_21_23-25_2018_PST" "./14442D1DF8A9310_Wed_Feb_21_23-34_2018_PST"
+[17] "./14442D1DF8A9310_Wed_Feb_21_23-44_2018_PST"
+> 
+> 
+> summary(X10_android_sensor_linear_acceleration_data)
+       X1                  X2               X3               X4               X5                  X6        
+ Min.   :1.519e+12   Min.   : NA      Min.   : NA      Min.   : NA      Min.   :2.000   sitting    :221134  
+ 1st Qu.:1.519e+12   1st Qu.: NA      1st Qu.: NA      1st Qu.: NA      1st Qu.:2.000   standing   :     0  
+ Median :1.519e+12   Median : NA      Median : NA      Median : NA      Median :3.000   walking    :     0  
+ Mean   :1.519e+12   Mean   :NaN      Mean   :NaN      Mean   :NaN      Mean   :2.709   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.: NA      3rd Qu.: NA      3rd Qu.: NA      3rd Qu.:3.000                       
+ Max.   :1.519e+12   Max.   : NA      Max.   : NA      Max.   : NA      Max.   :3.000                       
+                     NA's   :221134   NA's   :221134   NA's   :221134                                       
+> 
+> 
+> summary(X11_android_sensor_rotation_vector_data)
+       X1                  X2                X3                X4                   X5                X6   
+ Min.   :1.519e+12   Min.   :-0.5698   Min.   :-0.2259   Min.   :-0.9740313   Min.   :0.04651   Min.   :0  
+ 1st Qu.:1.519e+12   1st Qu.:-0.3622   1st Qu.: 0.2615   1st Qu.:-0.6630126   1st Qu.:0.60083   1st Qu.:0  
+ Median :1.519e+12   Median :-0.3154   Median : 0.3062   Median :-0.6505625   Median :0.61093   Median :0  
+ Mean   :1.519e+12   Mean   :-0.2931   Mean   : 0.2895   Mean   :-0.6710549   Mean   :0.58374   Mean   :0  
+ 3rd Qu.:1.519e+12   3rd Qu.:-0.2628   3rd Qu.: 0.3595   3rd Qu.:-0.6392257   3rd Qu.:0.62884   3rd Qu.:0  
+ Max.   :1.519e+12   Max.   : 0.1214   Max.   : 0.6697   Max.   : 0.0001117   Max.   :1.00000   Max.   :0  
+       X7              X8        
+ Min.   :3   sitting    :145779  
+ 1st Qu.:3   standing   :     0  
+ Median :3   walking    :     0  
+ Mean   :3   laying_down:     0  
+ 3rd Qu.:3                       
+ Max.   :3                       
+> 
+> 
+> 
+> 
+> summary(X19_android_sensor_step_counter_data)
+       X1                  X2          X3              X4   
+ Min.   :1.519e+12   Min.   :0   Min.   :3   sitting    :3  
+ 1st Qu.:1.519e+12   1st Qu.:0   1st Qu.:3   standing   :0  
+ Median :1.519e+12   Median :0   Median :3   walking    :0  
+ Mean   :1.519e+12   Mean   :0   Mean   :3   laying_down:0  
+ 3rd Qu.:1.519e+12   3rd Qu.:0   3rd Qu.:3                  
+ Max.   :1.519e+12   Max.   :0   Max.   :3                  
+> 
+> summary(X1_android_sensor_accelerometer_data) 
+       X1                  X2                 X3                X4               X5                  X6        
+ Min.   :1.519e+12   Min.   :-12.4230   Min.   :-18.465   Min.   :-8.459   Min.   :2.000   sitting    :221294  
+ 1st Qu.:1.519e+12   1st Qu.: -0.1197   1st Qu.: -7.731   1st Qu.: 5.692   1st Qu.:2.000   standing   :     0  
+ Median :1.519e+12   Median :  1.2016   Median : -7.636   Median : 5.864   Median :3.000   walking    :     0  
+ Mean   :1.519e+12   Mean   :  0.7393   Mean   : -7.162   Mean   : 5.954   Mean   :2.708   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.:  1.5750   3rd Qu.: -7.540   3rd Qu.: 5.989   3rd Qu.:3.000                       
+ Max.   :1.519e+12   Max.   : 19.5943   Max.   :156.865   Max.   :19.594   Max.   :3.000                       
+> 
+> 
+> summary(X2_android_sensor_magnetic_field_data)
+       X1                  X2               X3               X4               X5                  X6       
+ Min.   :1.519e+12   Min.   :-78.54   Min.   :-49.75   Min.   :-11.38   Min.   :0.000   sitting    :75408  
+ 1st Qu.:1.519e+12   1st Qu.:-52.16   1st Qu.:-28.18   1st Qu.: 18.57   1st Qu.:1.000   standing   :    0  
+ Median :1.519e+12   Median :-50.97   Median :-26.38   Median : 19.18   Median :2.000   walking    :    0  
+ Mean   :1.519e+12   Mean   :-46.11   Mean   :-26.95   Mean   : 18.49   Mean   :1.805   laying_down:    0  
+ 3rd Qu.:1.519e+12   3rd Qu.:-37.76   3rd Qu.:-25.16   3rd Qu.: 20.98   3rd Qu.:2.000                      
+ Max.   :1.519e+12   Max.   :-29.37   Max.   :999.39   Max.   : 51.55   Max.   :3.000                      
+> 
+> summary(X3_android_sensor_orientation_data)
+       X1                  X2               X3               X4                X5                  X6        
+ Min.   :1.519e+12   Min.   :  0.00   Min.   :-26.95   Min.   :-44.378   Min.   :0.000   sitting    :145779  
+ 1st Qu.:1.519e+12   1st Qu.: 89.11   1st Qu.: 51.60   1st Qu.: -8.998   1st Qu.:1.000   standing   :     0  
+ Median :1.519e+12   Median : 91.22   Median : 52.47   Median : -5.101   Median :2.000   walking    :     0  
+ Mean   :1.519e+12   Mean   : 96.72   Mean   : 49.30   Mean   : -1.931   Mean   :1.788   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.: 95.60   3rd Qu.: 53.68   3rd Qu.:  6.631   3rd Qu.:2.000                       
+ Max.   :1.519e+12   Max.   :360.00   Max.   :125.07   Max.   : 17.723   Max.   :3.000                       
+> 
+> summary(X4_android_sensor_gyroscope_data)
+       X1                  X2                  X3                  X4                  X5                 X6        
+ Min.   :1.519e+12   Min.   :-6.442698   Min.   :-3.177404   Min.   :-4.021693   Min.   :2.00   sitting    :145684  
+ 1st Qu.:1.519e+12   1st Qu.:-0.002663   1st Qu.:-0.002663   1st Qu.:-0.002663   1st Qu.:2.00   standing   :     0  
+ Median :1.519e+12   Median : 0.000000   Median : 0.000000   Median : 0.000000   Median :3.00   walking    :     0  
+ Mean   :1.519e+12   Mean   :-0.001008   Mean   : 0.000392   Mean   :-0.001723   Mean   :2.55   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.: 0.002663   3rd Qu.: 0.002663   3rd Qu.: 0.002663   3rd Qu.:3.00                       
+ Max.   :1.519e+12   Max.   :12.270158   Max.   : 3.113482   Max.   : 2.359748   Max.   :3.00                       
+> 
+> summary(X5_android_sensor_light_data)
+       X1                  X2          X3                   X4          X5              X6    
+ Min.   :1.519e+12   Min.   :0   Min.   :-6.366e-06   Min.   :0   Min.   :3   sitting    :38  
+ 1st Qu.:1.519e+12   1st Qu.:0   1st Qu.:-6.366e-06   1st Qu.:0   1st Qu.:3   standing   : 0  
+ Median :1.519e+12   Median :0   Median :-6.366e-06   Median :0   Median :3   walking    : 0  
+ Mean   :1.519e+12   Mean   :0   Mean   :-6.366e-06   Mean   :0   Mean   :3   laying_down: 0  
+ 3rd Qu.:1.519e+12   3rd Qu.:0   3rd Qu.:-6.366e-06   3rd Qu.:0   3rd Qu.:3                   
+ Max.   :1.519e+12   Max.   :0   Max.   :-6.366e-06   Max.   :0   Max.   :3                   
+> 
+> summary(X65539_data)
+       X1                  X2          X3          X4          X5          X6          X7          X8          X9   
+ Min.   :1.519e+12   Min.   :1   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0  
+ 1st Qu.:1.519e+12   1st Qu.:1   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0  
+ Median :1.519e+12   Median :1   Median :0   Median :0   Median :0   Median :0   Median :0   Median :0   Median :0  
+ Mean   :1.519e+12   Mean   :1   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0  
+ 3rd Qu.:1.519e+12   3rd Qu.:1   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0  
+ Max.   :1.519e+12   Max.   :1   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0  
+      X10         X11         X12         X13         X14         X15         X16         X17             X18    
+ Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   Min.   :0   sitting    :73  
+ 1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0   standing   : 0  
+ Median :0   Median :0   Median :0   Median :0   Median :0   Median :0   Median :0   Median :0   walking    : 0  
+ Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   Mean   :0   laying_down: 0  
+ 3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0                   
+ Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0   Max.   :0                   
+> 
+> 
+> summary(X9_android_sensor_gravity_data)
+       X1                  X2               X3               X4               X5                  X6        
+ Min.   :1.519e+12   Min.   : NA      Min.   : NA      Min.   : NA      Min.   :2.000   sitting    :221134  
+ 1st Qu.:1.519e+12   1st Qu.: NA      1st Qu.: NA      1st Qu.: NA      1st Qu.:2.000   standing   :     0  
+ Median :1.519e+12   Median : NA      Median : NA      Median : NA      Median :3.000   walking    :     0  
+ Mean   :1.519e+12   Mean   :NaN      Mean   :NaN      Mean   :NaN      Mean   :2.709   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.: NA      3rd Qu.: NA      3rd Qu.: NA      3rd Qu.:3.000                       
+ Max.   :1.519e+12   Max.   : NA      Max.   : NA      Max.   : NA      Max.   :3.000                       
+                     NA's   :221134   NA's   :221134   NA's   :221134                                       
+> 
+> summary(X10_android_sensor_linear_acceleration_data)
+       X1                  X2               X3               X4               X5                  X6        
+ Min.   :1.519e+12   Min.   : NA      Min.   : NA      Min.   : NA      Min.   :2.000   sitting    :221134  
+ 1st Qu.:1.519e+12   1st Qu.: NA      1st Qu.: NA      1st Qu.: NA      1st Qu.:2.000   standing   :     0  
+ Median :1.519e+12   Median : NA      Median : NA      Median : NA      Median :3.000   walking    :     0  
+ Mean   :1.519e+12   Mean   :NaN      Mean   :NaN      Mean   :NaN      Mean   :2.709   laying_down:     0  
+ 3rd Qu.:1.519e+12   3rd Qu.: NA      3rd Qu.: NA      3rd Qu.: NA      3rd Qu.:3.000                       
+ Max.   :1.519e+12   Max.   : NA      Max.   : NA      Max.   : NA      Max.   :3.000                       
+                     NA's   :221134   NA's   :221134   NA's   :221134  
+                     
+> summary(merged_data)
+      X1            accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5
+ Length:283923      Min.   :-12.42   Min.   :-18.46   Min.   :-8.46    Min.   :2.00    
+ Class :character   1st Qu.: -0.12   1st Qu.: -7.73   1st Qu.: 5.69    1st Qu.:2.00    
+ Mode  :character   Median :  1.20   Median : -7.64   Median : 5.86    Median :3.00    
+                    Mean   :  0.74   Mean   : -7.16   Mean   : 5.95    Mean   :2.71    
+                    3rd Qu.:  1.58   3rd Qu.: -7.54   3rd Qu.: 5.99    3rd Qu.:3.00    
+                    Max.   : 19.59   Max.   :156.86   Max.   :19.59    Max.   :3.00    
+                    NA's   :62629    NA's   :62629    NA's   :62629    NA's   :62629   
+    accelerometer_X6    gravity_X2       gravity_X3       gravity_X4       gravity_X5   
+ sitting    :221294   Min.   : NA      Min.   : NA      Min.   : NA      Min.   :2.00   
+ standing   :     0   1st Qu.: NA      1st Qu.: NA      1st Qu.: NA      1st Qu.:2.00   
+ walking    :     0   Median : NA      Median : NA      Median : NA      Median :3.00   
+ laying_down:     0   Mean   :NaN      Mean   :NaN      Mean   :NaN      Mean   :2.71   
+ NA's       : 62629   3rd Qu.: NA      3rd Qu.: NA      3rd Qu.: NA      3rd Qu.:3.00   
+                      Max.   : NA      Max.   : NA      Max.   : NA      Max.   :3.00   
+                      NA's   :283923   NA's   :283923   NA's   :283923   NA's   :62789  
+       gravity_X6      gyroscope_X2     gyroscope_X3     gyroscope_X4     gyroscope_X5   
+ sitting    :221134   Min.   :-6.44    Min.   :-3.18    Min.   :-4.02    Min.   :2.00    
+ standing   :     0   1st Qu.: 0.00    1st Qu.: 0.00    1st Qu.: 0.00    1st Qu.:2.00    
+ walking    :     0   Median : 0.00    Median : 0.00    Median : 0.00    Median :3.00    
+ laying_down:     0   Mean   : 0.00    Mean   : 0.00    Mean   : 0.00    Mean   :2.55    
+ NA's       : 62789   3rd Qu.: 0.00    3rd Qu.: 0.00    3rd Qu.: 0.00    3rd Qu.:3.00    
+                      Max.   :12.27    Max.   : 3.11    Max.   : 2.36    Max.   :3.00    
+                      NA's   :138239   NA's   :138239   NA's   :138239   NA's   :138239  
+      gyroscope_X6    linear_acceleration_X2 linear_acceleration_X3 linear_acceleration_X4
+ sitting    :145684   Min.   : NA            Min.   : NA            Min.   : NA           
+ standing   :     0   1st Qu.: NA            1st Qu.: NA            1st Qu.: NA           
+ walking    :     0   Median : NA            Median : NA            Median : NA           
+ laying_down:     0   Mean   :NaN            Mean   :NaN            Mean   :NaN           
+ NA's       :138239   3rd Qu.: NA            3rd Qu.: NA            3rd Qu.: NA           
+                      Max.   : NA            Max.   : NA            Max.   : NA           
+                      NA's   :283923         NA's   :283923         NA's   :283923        
+ linear_acceleration_X5 linear_acceleration_X6 magnetic_field_X2 magnetic_field_X3 magnetic_field_X4
+ Min.   :2.00           sitting    :221134     Min.   :-78.54    Min.   :-49.75    Min.   :-11.38   
+ 1st Qu.:2.00           standing   :     0     1st Qu.:-52.16    1st Qu.:-28.18    1st Qu.: 18.57   
+ Median :3.00           walking    :     0     Median :-50.97    Median :-26.38    Median : 19.18   
+ Mean   :2.71           laying_down:     0     Mean   :-46.11    Mean   :-26.95    Mean   : 18.49   
+ 3rd Qu.:3.00           NA's       : 62789     3rd Qu.:-37.76    3rd Qu.:-25.16    3rd Qu.: 20.98   
+ Max.   :3.00                                  Max.   :-29.37    Max.   :999.39    Max.   : 51.55   
+ NA's   :62789                                 NA's   :208515    NA's   :208515    NA's   :208515   
+ magnetic_field_X5   magnetic_field_X6  orientation_X2   orientation_X3   orientation_X4  
+ Min.   :0.0       sitting    : 75408   Min.   :  0.00   Min.   :-26.95   Min.   :-44.38  
+ 1st Qu.:1.0       standing   :     0   1st Qu.: 89.11   1st Qu.: 51.60   1st Qu.: -9.00  
+ Median :2.0       walking    :     0   Median : 91.22   Median : 52.47   Median : -5.10  
+ Mean   :1.8       laying_down:     0   Mean   : 96.72   Mean   : 49.30   Mean   : -1.93  
+ 3rd Qu.:2.0       NA's       :208515   3rd Qu.: 95.60   3rd Qu.: 53.68   3rd Qu.:  6.63  
+ Max.   :3.0                            Max.   :360.00   Max.   :125.07   Max.   : 17.72  
+ NA's   :208515                         NA's   :138144   NA's   :138144   NA's   :138144  
+ orientation_X5       orientation_X6   rotation_vector_X2 rotation_vector_X3 rotation_vector_X4
+ Min.   :0.00     sitting    :145779   Min.   :-0.57      Min.   :-0.23      Min.   :-0.97     
+ 1st Qu.:1.00     standing   :     0   1st Qu.:-0.36      1st Qu.: 0.26      1st Qu.:-0.66     
+ Median :2.00     walking    :     0   Median :-0.32      Median : 0.31      Median :-0.65     
+ Mean   :1.79     laying_down:     0   Mean   :-0.29      Mean   : 0.29      Mean   :-0.67     
+ 3rd Qu.:2.00     NA's       :138144   3rd Qu.:-0.26      3rd Qu.: 0.36      3rd Qu.:-0.64     
+ Max.   :3.00                          Max.   : 0.12      Max.   : 0.67      Max.   : 0.00     
+ NA's   :138144                        NA's   :138144     NA's   :138144     NA's   :138144    
+ rotation_vector_X5 rotation_vector_X6 rotation_vector_X7   rotation_vector_X8
+ Min.   :0.05       Min.   :0          Min.   :3          sitting    :145779  
+ 1st Qu.:0.60       1st Qu.:0          1st Qu.:3          standing   :     0  
+ Median :0.61       Median :0          Median :3          walking    :     0  
+ Mean   :0.58       Mean   :0          Mean   :3          laying_down:     0  
+ 3rd Qu.:0.63       3rd Qu.:0          3rd Qu.:3          NA's       :138144  
+ Max.   :1.00       Max.   :0          Max.   :3                              
+ NA's   :138144     NA's   :138144     NA's   :138144 
+ 
+ > summary(merged_data)
+       X            timestamp         accelerometer_X2 accelerometer_X3 accelerometer_X4
+ Min.   :     1   Min.   :1.519e+12   Min.   :-19.60   Min.   :-19.60   Min.   :-19.60  
+ 1st Qu.: 52114   1st Qu.:1.519e+12   1st Qu.: -2.16   1st Qu.: -5.11   1st Qu.:  3.72  
+ Median :146432   Median :1.519e+12   Median :  4.41   Median :  2.68   Median :  4.77  
+ Mean   :256798   Mean   :1.519e+12   Mean   :  2.20   Mean   :  0.50   Mean   :  4.80  
+ 3rd Qu.:376147   3rd Qu.:1.519e+12   3rd Qu.:  6.98   3rd Qu.:  5.24   3rd Qu.:  6.66  
+ Max.   :952844   Max.   :1.520e+12   Max.   : 19.59   Max.   :156.86   Max.   : 19.59  
+                                      NA's   :277085   NA's   :277085   NA's   :277085  
+ accelerometer_X5   gravity_X2       gravity_X3       gravity_X4       gravity_X5    
+ Min.   :2.00     Min.   :-9.8     Min.   :-9.8     Min.   :-9.7     Min.   :2.00    
+ 1st Qu.:3.00     1st Qu.:-2.8     1st Qu.:-2.5     1st Qu.: 3.6     1st Qu.:3.00    
+ Median :3.00     Median : 6.0     Median : 3.7     Median : 4.5     Median :3.00    
+ Mean   :2.86     Mean   : 2.4     Mean   : 1.4     Mean   : 4.8     Mean   :2.86    
+ 3rd Qu.:3.00     3rd Qu.: 7.0     3rd Qu.: 5.3     3rd Qu.: 7.0     3rd Qu.:3.00    
+ Max.   :3.00     Max.   : 9.8     Max.   : 9.7     Max.   : 9.8     Max.   :3.00    
+ NA's   :277085   NA's   :500270   NA's   :500270   NA's   :500270   NA's   :279136  
+  gyroscope_X2     gyroscope_X3     gyroscope_X4     gyroscope_X5    linear_acceleration_X2
+ Min.   :-20.7    Min.   :-7.0     Min.   :-8.0     Min.   :2.0      Min.   :-22.1         
+ 1st Qu.:  0.0    1st Qu.: 0.0     1st Qu.: 0.0     1st Qu.:3.0      1st Qu.:  0.0         
+ Median :  0.0    Median : 0.0     Median : 0.0     Median :3.0      Median :  0.0         
+ Mean   :  0.0    Mean   : 0.0     Mean   : 0.0     Mean   :2.8      Mean   :  0.0         
+ 3rd Qu.:  0.0    3rd Qu.: 0.0     3rd Qu.: 0.0     3rd Qu.:3.0      3rd Qu.:  0.2         
+ Max.   : 15.1    Max.   :12.5     Max.   :12.7     Max.   :3.0      Max.   : 15.5         
+ NA's   :473653   NA's   :473653   NA's   :473653   NA's   :473653   NA's   :500275        
+ linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5 magnetic_field_X2
+ Min.   :-28.0          Min.   :-28.1          Min.   :2.00           Min.   :-110.3   
+ 1st Qu.: -0.1          1st Qu.: -0.3          1st Qu.:3.00           1st Qu.: -26.2   
+ Median :  0.0          Median :  0.0          Median :3.00           Median : -22.9   
+ Mean   :  0.0          Mean   : -0.1          Mean   :2.86           Mean   : -13.0   
+ 3rd Qu.:  0.1          3rd Qu.:  0.0          3rd Qu.:3.00           3rd Qu.:  10.5   
+ Max.   :166.4          Max.   : 20.5          Max.   :3.00           Max.   :  65.9   
+ NA's   :500275         NA's   :500275         NA's   :279141         NA's   :1385606  
+ magnetic_field_X3 magnetic_field_X4 magnetic_field_X5 orientation_X2   orientation_X3  
+ Min.   :-61.8     Min.   :-66.0     Min.   :0.0       Min.   :  0.0    Min.   :-180.0  
+ 1st Qu.:  0.1     1st Qu.:-25.7     1st Qu.:2.0       1st Qu.: 22.1    1st Qu.: -52.0  
+ Median :  6.1     Median :-21.0     Median :2.0       Median : 37.2    Median : -37.5  
+ Mean   :  5.0     Mean   :-13.2     Mean   :2.4       Mean   :109.7    Mean   : -12.6  
+ 3rd Qu.: 15.1     3rd Qu.: -1.0     3rd Qu.:3.0       3rd Qu.:198.9    3rd Qu.:  34.2  
+ Max.   :999.4     Max.   : 68.9     Max.   :3.0       Max.   :360.0    Max.   : 180.0  
+ NA's   :1385606   NA's   :1385606   NA's   :1385606   NA's   :472822   NA's   :472822  
+ orientation_X4   orientation_X5   rotation_vector_X2 rotation_vector_X3 rotation_vector_X4
+ Min.   :-89.3    Min.   :0.0      Min.   :-1.0       Min.   :-1.0       Min.   :-1.0      
+ 1st Qu.:-45.5    1st Qu.:2.0      1st Qu.:-0.2       1st Qu.:-0.4       1st Qu.:-0.1      
+ Median :-37.1    Median :2.0      Median : 0.2       Median :-0.4       Median : 0.0      
+ Mean   :-16.0    Mean   :2.4      Mean   : 0.1       Mean   :-0.2       Mean   : 0.0      
+ 3rd Qu.: 13.2    3rd Qu.:3.0      3rd Qu.: 0.3       3rd Qu.: 0.2       3rd Qu.: 0.2      
+ Max.   : 89.8    Max.   :3.0      Max.   : 0.9       Max.   : 0.9       Max.   : 1.0      
+ NA's   :472822   NA's   :472822   NA's   :472788     NA's   :472788     NA's   :472788    
+ rotation_vector_X5 rotation_vector_X6 rotation_vector_X7         label        
+ Min.   :-1.0       Min.   :0          Min.   :3          sitting    : 484593  
+ 1st Qu.: 0.6       1st Qu.:0          1st Qu.:3          laying_down:1318087  
+ Median : 0.8       Median :0          Median :3          standing   : 242782  
+ Mean   : 0.6       Mean   :0          Mean   :3          walking    : 261328  
+ 3rd Qu.: 0.9       3rd Qu.:0          3rd Qu.:3                               
+ Max.   : 1.0       Max.   :0          Max.   :3                               
+ NA's   :472788     NA's   :472788     NA's   :472788
+ 
+ > cor(hads[, 3:32], use = "complete.obs")
+                       accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5
+accelerometer_X2            1.000000000      0.603141717    -0.2116122441     -0.219358091
+accelerometer_X3            0.603141717      1.000000000    -0.0792431700     -0.223531874
+accelerometer_X4           -0.211612244     -0.079243170     1.0000000000     -0.026933109
+accelerometer_X5           -0.219358091     -0.223531874    -0.0269331092      1.000000000
+gravity_X2                  0.991949178      0.604152735    -0.2341942070     -0.224770870
+gravity_X3                  0.595772571      0.985350989    -0.0773781951     -0.224642324
+gravity_X4                 -0.274361311     -0.106015025     0.9626776468     -0.012489256
+gravity_X5                 -0.219358091     -0.223531874    -0.0269331092      1.000000000
+gyroscope_X2                0.020866606      0.033889275     0.0174646809     -0.007911865
+gyroscope_X3               -0.004791321      0.046070061     0.0683430330     -0.018640546
+gyroscope_X4               -0.006791169      0.026093116     0.0198915115     -0.008248208
+gyroscope_X5               -0.219358091     -0.223531874    -0.0269331092      1.000000000
+linear_acceleration_X2      0.088143832      0.007015663     0.1723753146      0.037132422
+linear_acceleration_X3      0.022751641      0.051957911    -0.0082406546      0.014063500
+linear_acceleration_X4      0.240267223      0.102018279     0.0927792406     -0.051937785
+linear_acceleration_X5     -0.219358091     -0.223531874    -0.0269331092      1.000000000
+magnetic_field_X2          -0.908413146     -0.530266826     0.2494198001      0.150561020
+magnetic_field_X3          -0.263472525     -0.617322228     0.0525740860      0.140176729
+magnetic_field_X4          -0.453681676     -0.401593068    -0.2620709380      0.148801535
+magnetic_field_X5          -0.118081842     -0.229313740    -0.1214278954      0.434841948
+orientation_X2             -0.692806360     -0.535413979     0.2535107275      0.168154012
+orientation_X3             -0.666501662     -0.888175524    -0.0002431048      0.184964372
+orientation_X4             -0.983696156     -0.589069294     0.2239272586      0.218503363
+orientation_X5             -0.118731791     -0.229574321    -0.1219753186      0.434531266
+rotation_vector_X2          0.582942940      0.653270158    -0.0464682328     -0.154621294
+rotation_vector_X3         -0.756209364     -0.441165143     0.3857308137      0.148880220
+rotation_vector_X4         -0.426962593     -0.292525126     0.2857730866      0.073426398
+rotation_vector_X5          0.267007110      0.544847395     0.1078612828     -0.143538927
+rotation_vector_X6                   NA               NA               NA               NA
+rotation_vector_X7                   NA               NA               NA               NA
+                         gravity_X2  gravity_X3  gravity_X4   gravity_X5 gyroscope_X2
+accelerometer_X2        0.991949178  0.59577257 -0.27436131 -0.219358091  0.020866606
+accelerometer_X3        0.604152735  0.98535099 -0.10601502 -0.223531874  0.033889275
+accelerometer_X4       -0.234194207 -0.07737820  0.96267765 -0.026933109  0.017464681
+accelerometer_X5       -0.224770870 -0.22464232 -0.01248926  1.000000000 -0.007911865
+gravity_X2              1.000000000  0.59739804 -0.29323250 -0.224770870  0.021755722
+gravity_X3              0.597398036  1.00000000 -0.11213942 -0.224642324  0.019120119
+gravity_X4             -0.293232504 -0.11213942  1.00000000 -0.012489256  0.010915572
+gravity_X5             -0.224770870 -0.22464232 -0.01248926  1.000000000 -0.007911865
+gyroscope_X2            0.021755722  0.01912012  0.01091557 -0.007911865  1.000000000
+gyroscope_X3            0.007840317  0.06760854  0.02408431 -0.018640546  0.044618098
+gyroscope_X4           -0.007222427  0.05549332 -0.01332985 -0.008248208 -0.150884714
+gyroscope_X5           -0.224770870 -0.22464232 -0.01248926  1.000000000 -0.007911865
+linear_acceleration_X2 -0.038709498  0.00199962  0.14162961  0.037132422 -0.006475828
+linear_acceleration_X3  0.019119333 -0.11911151  0.03944948  0.014063500  0.085339725
+linear_acceleration_X4  0.227621259  0.13132705 -0.18016670 -0.051937785  0.023315668
+linear_acceleration_X5 -0.224770870 -0.22464232 -0.01248926  1.000000000 -0.007911865
+magnetic_field_X2      -0.913510039 -0.52068892  0.30114658  0.150561020 -0.011180486
+magnetic_field_X3      -0.267048917 -0.63272169  0.06664716  0.140176729 -0.027512077
+magnetic_field_X4      -0.457365706 -0.39699515 -0.23279263  0.148801535  0.002504979
+magnetic_field_X5      -0.116858922 -0.22841995 -0.11382993  0.434841948 -0.009991003
+orientation_X2         -0.701418335 -0.53134383  0.30037437  0.168154012 -0.013343707
+orientation_X3         -0.667946959 -0.89267281  0.02841647  0.184964372 -0.025185108
+orientation_X4         -0.991139796 -0.57994660  0.27999332  0.218503363 -0.015172321
+orientation_X5         -0.117067188 -0.22893044 -0.11426243  0.434531266 -0.009991296
+rotation_vector_X2      0.586654699  0.65288875 -0.08291388 -0.154621294  0.006825357
+rotation_vector_X3     -0.767408015 -0.43299537  0.43014120  0.148880220 -0.010990079
+rotation_vector_X4     -0.433037740 -0.29012520  0.30447313  0.073426398  0.006224967
+rotation_vector_X5      0.257073966  0.54181907  0.09796502 -0.143538927  0.004758100
+rotation_vector_X6               NA          NA          NA           NA           NA
+rotation_vector_X7               NA          NA          NA           NA           NA
+                        gyroscope_X3  gyroscope_X4 gyroscope_X5 linear_acceleration_X2
+accelerometer_X2       -0.0047913214 -0.0067911686 -0.219358091            0.088143832
+accelerometer_X3        0.0460700609  0.0260931156 -0.223531874            0.007015663
+accelerometer_X4        0.0683430330  0.0198915115 -0.026933109            0.172375315
+accelerometer_X5       -0.0186405457 -0.0082482082  1.000000000            0.037132422
+gravity_X2              0.0078403168 -0.0072224275 -0.224770870           -0.038709498
+gravity_X3              0.0676085418  0.0554933161 -0.224642324            0.001999620
+gravity_X4              0.0240843065 -0.0133298534 -0.012489256            0.141629610
+gravity_X5             -0.0186405457 -0.0082482082  1.000000000            0.037132422
+gyroscope_X2            0.0446180984 -0.1508847140 -0.007911865           -0.006475828
+gyroscope_X3            1.0000000000  0.2893008458 -0.018640546           -0.099477800
+gyroscope_X4            0.2893008458  1.0000000000 -0.008248208            0.003223691
+gyroscope_X5           -0.0186405457 -0.0082482082  1.000000000            0.037132422
+linear_acceleration_X2 -0.0994778001  0.0032236908  0.037132422            1.000000000
+linear_acceleration_X3 -0.1276844814 -0.1730458495  0.014063500            0.029135909
+linear_acceleration_X4  0.1597788792  0.1213312160 -0.051937785            0.105434312
+linear_acceleration_X5 -0.0186405457 -0.0082482082  1.000000000            0.037132422
+magnetic_field_X2      -0.0120813093  0.0015349460  0.150561020            0.017547382
+magnetic_field_X3      -0.0451291734 -0.0398606762  0.140176729            0.021592836
+magnetic_field_X4      -0.0321701200 -0.0002376859  0.148801535            0.017719072
+magnetic_field_X5      -0.0277462231 -0.0195563861  0.434841948           -0.012549780
+orientation_X2         -0.0283275279 -0.0009780946  0.168154012            0.050547301
+orientation_X3         -0.0475050549 -0.0280858348  0.184964372           -0.005172088
+orientation_X4         -0.0108283051  0.0023738791  0.218503363            0.034138295
+orientation_X5         -0.0277492197 -0.0195590602  0.434531266           -0.016040131
+rotation_vector_X2      0.0386671084  0.0086127727 -0.154621294           -0.014729298
+rotation_vector_X3      0.0005511932 -0.0115526805  0.148880220            0.069320296
+rotation_vector_X4      0.0206675077  0.0250618684  0.073426398            0.037190390
+rotation_vector_X5      0.0440666778  0.0255917960 -0.143538927            0.084759205
+rotation_vector_X6                NA            NA           NA                     NA
+rotation_vector_X7                NA            NA           NA                     NA
+                       linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5
+accelerometer_X2                 0.0227516409             0.24026722           -0.219358091
+accelerometer_X3                 0.0519579105             0.10201828           -0.223531874
+accelerometer_X4                -0.0082406546             0.09277924           -0.026933109
+accelerometer_X5                 0.0140635001            -0.05193779            1.000000000
+gravity_X2                       0.0191193334             0.22762126           -0.224770870
+gravity_X3                      -0.1191115139             0.13132705           -0.224642324
+gravity_X4                       0.0394494789            -0.18016670           -0.012489256
+gravity_X5                       0.0140635001            -0.05193779            1.000000000
+gyroscope_X2                     0.0853397250             0.02331567           -0.007911865
+gyroscope_X3                    -0.1276844814             0.15977888           -0.018640546
+gyroscope_X4                    -0.1730458495             0.12133122           -0.008248208
+gyroscope_X5                     0.0140635001            -0.05193779            1.000000000
+linear_acceleration_X2           0.0291359089             0.10543431            0.037132422
+linear_acceleration_X3           1.0000000000            -0.17507859            0.014063500
+linear_acceleration_X4          -0.1750785918             1.00000000           -0.051937785
+linear_acceleration_X5           0.0140635001            -0.05193779            1.000000000
+magnetic_field_X2               -0.0381507879            -0.20140108            0.150561020
+magnetic_field_X3                0.1110576297            -0.05411376            0.140176729
+magnetic_field_X4               -0.0133410051            -0.09604229            0.148801535
+magnetic_field_X5                0.0025225433            -0.02254534            0.434841948
+orientation_X2                  -0.0057240511            -0.18369242            0.168154012
+orientation_X3                   0.0563775872            -0.10542386            0.184964372
+orientation_X4                  -0.0334961379            -0.21622968            0.218503363
+orientation_X5                   0.0039947936            -0.02294378            0.434531266
+rotation_vector_X2              -0.0198631125             0.13614757           -0.154621294
+rotation_vector_X3              -0.0329187992            -0.18055428            0.148880220
+rotation_vector_X4              -0.0041590799            -0.08151883            0.073426398
+rotation_vector_X5              -0.0006958185             0.03160453           -0.143538927
+rotation_vector_X6                         NA                     NA                     NA
+rotation_vector_X7                         NA                     NA                     NA
+                       magnetic_field_X2 magnetic_field_X3 magnetic_field_X4 magnetic_field_X5
+accelerometer_X2            -0.908413146       -0.26347253     -0.4536816764      -0.118081842
+accelerometer_X3            -0.530266826       -0.61732223     -0.4015930675      -0.229313740
+accelerometer_X4             0.249419800        0.05257409     -0.2620709380      -0.121427895
+accelerometer_X5             0.150561020        0.14017673      0.1488015348       0.434841948
+gravity_X2                  -0.913510039       -0.26704892     -0.4573657062      -0.116858922
+gravity_X3                  -0.520688918       -0.63272169     -0.3969951536      -0.228419953
+gravity_X4                   0.301146576        0.06664716     -0.2327926319      -0.113829934
+gravity_X5                   0.150561020        0.14017673      0.1488015348       0.434841948
+gyroscope_X2                -0.011180486       -0.02751208      0.0025049792      -0.009991003
+gyroscope_X3                -0.012081309       -0.04512917     -0.0321701200      -0.027746223
+gyroscope_X4                 0.001534946       -0.03986068     -0.0002376859      -0.019556386
+gyroscope_X5                 0.150561020        0.14017673      0.1488015348       0.434841948
+linear_acceleration_X2       0.017547382        0.02159284      0.0177190719      -0.012549780
+linear_acceleration_X3      -0.038150788        0.11105763     -0.0133410051       0.002522543
+linear_acceleration_X4      -0.201401085       -0.05411376     -0.0960422922      -0.022545336
+linear_acceleration_X5       0.150561020        0.14017673      0.1488015348       0.434841948
+magnetic_field_X2            1.000000000        0.16533670      0.3632824610       0.090151789
+magnetic_field_X3            0.165336705        1.00000000      0.0999655923       0.126981141
+magnetic_field_X4            0.363282461        0.09996559      1.0000000000       0.096519758
+magnetic_field_X5            0.090151789        0.12698114      0.0965197585       1.000000000
+orientation_X2               0.758268903        0.13779744      0.4951880473       0.067905729
+orientation_X3               0.578886557        0.60774905      0.3284482439       0.226144419
+orientation_X4               0.914390754        0.25230469      0.4628624595       0.110579890
+orientation_X5               0.090074261        0.12627838      0.0968217009       0.999473055
+rotation_vector_X2          -0.572015773       -0.17965855     -0.6310934914      -0.141402471
+rotation_vector_X3           0.679054858        0.18230597      0.3857140095       0.048357223
+rotation_vector_X4           0.532642773        0.04400291     -0.0599110774       0.064363312
+rotation_vector_X5          -0.236308513       -0.23582298     -0.0724309437      -0.257653738
+rotation_vector_X6                    NA                NA                NA                NA
+rotation_vector_X7                    NA                NA                NA                NA
+                       orientation_X2 orientation_X3 orientation_X4 orientation_X5
+accelerometer_X2        -0.6928063602  -0.6665016619   -0.983696156   -0.118731791
+accelerometer_X3        -0.5354139786  -0.8881755235   -0.589069294   -0.229574321
+accelerometer_X4         0.2535107275  -0.0002431048    0.223927259   -0.121975319
+accelerometer_X5         0.1681540121   0.1849643718    0.218503363    0.434531266
+gravity_X2              -0.7014183352  -0.6679469589   -0.991139796   -0.117067188
+gravity_X3              -0.5313438309  -0.8926728102   -0.579946602   -0.228930444
+gravity_X4               0.3003743707   0.0284164746    0.279993320   -0.114262427
+gravity_X5               0.1681540121   0.1849643718    0.218503363    0.434531266
+gyroscope_X2            -0.0133437066  -0.0251851078   -0.015172321   -0.009991296
+gyroscope_X3            -0.0283275279  -0.0475050549   -0.010828305   -0.027749220
+gyroscope_X4            -0.0009780946  -0.0280858348    0.002373879   -0.019559060
+gyroscope_X5             0.1681540121   0.1849643718    0.218503363    0.434531266
+linear_acceleration_X2   0.0505473013  -0.0051720879    0.034138295   -0.016040131
+linear_acceleration_X3  -0.0057240511   0.0563775872   -0.033496138    0.003994794
+linear_acceleration_X4  -0.1836924232  -0.1054238649   -0.216229678   -0.022943777
+linear_acceleration_X5   0.1681540121   0.1849643718    0.218503363    0.434531266
+magnetic_field_X2        0.7582689027   0.5788865572    0.914390754    0.090074261
+magnetic_field_X3        0.1377974373   0.6077490451    0.252304685    0.126278378
+magnetic_field_X4        0.4951880473   0.3284482439    0.462862459    0.096821701
+magnetic_field_X5        0.0679057287   0.2261444191    0.110579890    0.999473055
+orientation_X2           1.0000000000   0.4599008621    0.686928634    0.067762837
+orientation_X3           0.4599008621   1.0000000000    0.655110252    0.226293072
+orientation_X4           0.6869286345   0.6551102523    1.000000000    0.110708810
+orientation_X5           0.0677628366   0.2262930723    0.110708810    1.000000000
+rotation_vector_X2      -0.6407892567  -0.5753198741   -0.578437459   -0.141534806
+rotation_vector_X3       0.5965938318   0.4555972397    0.749201640    0.048493527
+rotation_vector_X4       0.3983760395   0.3316361428    0.429809874    0.064335976
+rotation_vector_X5      -0.1551065362  -0.4980896200   -0.266065647   -0.257594715
+rotation_vector_X6                 NA             NA             NA             NA
+rotation_vector_X7                 NA             NA             NA             NA
+                       rotation_vector_X2 rotation_vector_X3 rotation_vector_X4 rotation_vector_X5
+accelerometer_X2              0.582942940      -0.7562093642       -0.426962593       0.2670071096
+accelerometer_X3              0.653270158      -0.4411651429       -0.292525126       0.5448473952
+accelerometer_X4             -0.046468233       0.3857308137        0.285773087       0.1078612828
+accelerometer_X5             -0.154621294       0.1488802202        0.073426398      -0.1435389270
+gravity_X2                    0.586654699      -0.7674080151       -0.433037740       0.2570739662
+gravity_X3                    0.652888752      -0.4329953667       -0.290125201       0.5418190749
+gravity_X4                   -0.082913884       0.4301411996        0.304473126       0.0979650171
+gravity_X5                   -0.154621294       0.1488802202        0.073426398      -0.1435389270
+gyroscope_X2                  0.006825357      -0.0109900786        0.006224967       0.0047580999
+gyroscope_X3                  0.038667108       0.0005511932        0.020667508       0.0440666778
+gyroscope_X4                  0.008612773      -0.0115526805        0.025061868       0.0255917960
+gyroscope_X5                 -0.154621294       0.1488802202        0.073426398      -0.1435389270
+linear_acceleration_X2       -0.014729298       0.0693202965        0.037190390       0.0847592045
+linear_acceleration_X3       -0.019863112      -0.0329187992       -0.004159080      -0.0006958185
+linear_acceleration_X4        0.136147567      -0.1805542756       -0.081518833       0.0316045287
+linear_acceleration_X5       -0.154621294       0.1488802202        0.073426398      -0.1435389270
+magnetic_field_X2            -0.572015773       0.6790548580        0.532642773      -0.2363085129
+magnetic_field_X3            -0.179658548       0.1823059739        0.044002912      -0.2358229769
+magnetic_field_X4            -0.631093491       0.3857140095       -0.059911077      -0.0724309437
+magnetic_field_X5            -0.141402471       0.0483572227        0.064363312      -0.2576537376
+orientation_X2               -0.640789257       0.5965938318        0.398376039      -0.1551065362
+orientation_X3               -0.575319874       0.4555972397        0.331636143      -0.4980896200
+orientation_X4               -0.578437459       0.7492016400        0.429809874      -0.2660656468
+orientation_X5               -0.141534806       0.0484935273        0.064335976      -0.2575947152
+rotation_vector_X2            1.000000000      -0.4865677755       -0.200079330       0.1098834226
+rotation_vector_X3           -0.486567775       1.0000000000        0.168561141      -0.0301115046
+rotation_vector_X4           -0.200079330       0.1685611412        1.000000000      -0.1945963893
+rotation_vector_X5            0.109883423      -0.0301115046       -0.194596389       1.0000000000
+rotation_vector_X6                     NA                 NA                 NA                 NA
+rotation_vector_X7                     NA                 NA                 NA                 NA
+                       rotation_vector_X6 rotation_vector_X7
+accelerometer_X2                       NA                 NA
+accelerometer_X3                       NA                 NA
+accelerometer_X4                       NA                 NA
+accelerometer_X5                       NA                 NA
+gravity_X2                             NA                 NA
+gravity_X3                             NA                 NA
+gravity_X4                             NA                 NA
+gravity_X5                             NA                 NA
+gyroscope_X2                           NA                 NA
+gyroscope_X3                           NA                 NA
+gyroscope_X4                           NA                 NA
+gyroscope_X5                           NA                 NA
+linear_acceleration_X2                 NA                 NA
+linear_acceleration_X3                 NA                 NA
+linear_acceleration_X4                 NA                 NA
+linear_acceleration_X5                 NA                 NA
+magnetic_field_X2                      NA                 NA
+magnetic_field_X3                      NA                 NA
+magnetic_field_X4                      NA                 NA
+magnetic_field_X5                      NA                 NA
+orientation_X2                         NA                 NA
+orientation_X3                         NA                 NA
+orientation_X4                         NA                 NA
+orientation_X5                         NA                 NA
+rotation_vector_X2                     NA                 NA
+rotation_vector_X3                     NA                 NA
+rotation_vector_X4                     NA                 NA
+rotation_vector_X5                     NA                 NA
+rotation_vector_X6                      1                 NA
+rotation_vector_X7                     NA                  1

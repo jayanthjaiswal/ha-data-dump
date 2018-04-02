@@ -1,0 +1,537 @@
+> mymodel <- multinom(label~(gravity_X2+gravity_X3+gravity_X4+gravity_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 97500.855006 
+iter  10 value 55845.115179
+iter  20 value 42264.009157
+iter  30 value 40979.190572
+iter  40 value 40883.686364
+iter  50 value 40873.091879
+iter  50 value 40873.091872
+iter  50 value 40873.091872
+final  value 40873.091872 
+converged
+> 
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (gravity_X2 + gravity_X3 + gravity_X4 + 
+    gravity_X5), data = training, family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) gravity_X2 gravity_X3 gravity_X4 gravity_X5
+standing      -2.014160 -0.1666279  0.2987333 -0.6622401  2.2332903
+walking        3.406119 -0.1772781  0.2134021 -0.5960227  0.3528092
+laying_down    5.983854 -0.2203444  0.6672030 -0.1492331 -0.7524796
+
+Std. Errors:
+            (Intercept)  gravity_X2  gravity_X3  gravity_X4 gravity_X5
+standing      0.6287798 0.005722595 0.005926270 0.009881628  0.2095155
+walking       0.4089022 0.005637494 0.005759154 0.009507934  0.1360995
+laying_down   0.3535314 0.005635175 0.006209990 0.009837405  0.1168992
+
+Residual Deviance: 81746.18 
+AIC: 81776.18 
+> head(pp <- fitted(mymodel))
+       sitting    standing    walking laying_down
+1 0.1247850779 0.077712061 0.14289334   0.6546095
+2 0.0116378154 0.002037419 0.01115693   0.9751678
+3 0.0551361087 0.032202659 0.03257523   0.8800860
+5 0.1315006358 0.243172421 0.48805461   0.1372723
+6 0.0005935693 0.439535045 0.38995124   0.1699201
+7 0.3507400021 0.035634363 0.06898018   0.5446455
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+        792         309         933        5840        2126 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         482       83     225           2
+     standing          0      196     113           0
+     walking          77      273     376         207
+     laying_down     132      300     277        5131
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.7854966
+> 
+> 
+> 
+> mymodel <- multinom(label~(gravity_X2+gravity_X3+gravity_X4),data=training, family="binomial", maxit=1000)
+# weights:  20 (12 variable)
+initial  value 97500.855006 
+iter  10 value 54451.806620
+iter  20 value 41378.437739
+iter  30 value 41292.181445
+final  value 41292.168574 
+converged
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (gravity_X2 + gravity_X3 + gravity_X4), 
+    data = training, family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) gravity_X2 gravity_X3 gravity_X4
+standing       4.650280 -0.1662626  0.2945495  -0.663836
+walking        4.456767 -0.1760917  0.2113536  -0.597844
+laying_down    3.717721 -0.2159233  0.6779924  -0.139116
+
+Std. Errors:
+            (Intercept)  gravity_X2  gravity_X3  gravity_X4
+standing     0.07408184 0.005700172 0.005887374 0.009906548
+walking      0.07403656 0.005610868 0.005728422 0.009534867
+laying_down  0.07725342 0.005607396 0.006204014 0.009869373
+
+Residual Deviance: 82584.34 
+AIC: 82608.34 
+> head(pp <- fitted(mymodel))
+       sitting   standing    walking laying_down
+1 0.1244689934 0.07472494 0.13947890   0.6613272
+2 0.0206216142 0.03179585 0.02761893   0.9199636
+3 0.0498244959 0.02756366 0.02889708   0.8937148
+5 0.1337402369 0.24279689 0.49133746   0.1321254
+6 0.0006136065 0.43833598 0.39624672   0.1648037
+7 0.3420721356 0.03346504 0.06599598   0.5584668
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+        787         293         942        5852        2126 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         479       83     222           3
+     standing          0      183     110           0
+     walking          77      276     382         207
+     laying_down     135      310     277        5130
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.7840996
+> 
+> 
+> mymodel <- multinom(label~(gyroscope_X2+gyroscope_X3 + gyroscope_X4+gyroscope_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 99425.031579 
+iter  10 value 76230.551723
+iter  20 value 67629.558965
+final  value 67588.445679 
+converged
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (gyroscope_X2 + gyroscope_X3 + gyroscope_X4 + 
+    gyroscope_X5), data = training, family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) gyroscope_X2 gyroscope_X3 gyroscope_X4 gyroscope_X5
+standing    -12.3395002 -0.048819087 -0.009276653   -0.0492598    3.9555911
+walking      -8.0186369 -0.123647244 -0.589620210   -0.1303058    2.6561830
+laying_down   0.1907178 -0.000130897  0.027426566    0.0282319    0.4804263
+
+Std. Errors:
+            (Intercept) gyroscope_X2 gyroscope_X3 gyroscope_X4 gyroscope_X5
+standing      0.5346132   0.03661897   0.07144552   0.04614580   0.17872258
+walking       0.2332714   0.03039869   0.05806864   0.03895522   0.07868853
+laying_down   0.0709074   0.02453183   0.04671337   0.03066102   0.02536798
+
+Residual Deviance: 135176.9 
+AIC: 135206.9 
+> head(pp <- fitted(mymodel))
+    sitting    standing    walking laying_down
+1 0.1300765 0.081085264 0.12356828   0.6652699
+2 0.2356737 0.002810445 0.01570682   0.7458091
+3 0.1301130 0.081138250 0.12354417   0.6652045
+4 0.1332596 0.085708634 0.10505311   0.6759787
+5 0.1300725 0.081012828 0.12366340   0.6652513
+7 0.1291176 0.078501528 0.11705397   0.6753269
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+          0           0           6        7939        2055 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting           0        0       0           0
+     standing          0        0       0           0
+     walking           0        1       4           1
+     laying_down    1138      546     861        5394
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.679421
+> 
+> 
+> 
+> mymodel <- multinom(label~(linear_acceleration_X2+linear_acceleration_X3+linear_acceleration_X4+linear_acceleration_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 97500.855006 
+iter  10 value 74966.805148
+iter  20 value 65345.957717
+iter  30 value 65291.272815
+iter  30 value 65291.272559
+iter  30 value 65291.272558
+final  value 65291.272558 
+converged
+> 
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (linear_acceleration_X2 + linear_acceleration_X3 + 
+    linear_acceleration_X4 + linear_acceleration_X5), data = training, 
+    family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) linear_acceleration_X2 linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5
+standing     -4.1816426              0.4080528            -0.01934581            0.124935573             1.44298527
+walking       0.5083499             -0.2279306             0.01613879           -0.001975744            -0.06843161
+laying_down   8.8697975              0.2297618             0.01392544            0.089768022            -2.33271942
+
+Std. Errors:
+            (Intercept) linear_acceleration_X2 linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5
+standing      0.5891498             0.02293995             0.01677286             0.02297033             0.19682319
+walking       0.3511029             0.01829163             0.01320176             0.02007238             0.11770613
+laying_down   0.2740058             0.01770459             0.01235764             0.01784473             0.09191682
+
+Residual Deviance: 130582.5 
+AIC: 130612.5 
+> head(pp <- fitted(mymodel))
+     sitting    standing    walking laying_down
+1 0.09825500 0.120019292 0.12625815   0.6554676
+2 0.01467700 0.003883603 0.02156328   0.9598761
+3 0.10038170 0.114916157 0.13690860   0.6477935
+5 0.09624333 0.121807942 0.12283155   0.6591172
+6 0.13249608 0.053251823 0.35417604   0.4600761
+7 0.08508446 0.152603529 0.07783875   0.6844733
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+          0           1          73        7800        2126 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting           0        0       0           0
+     standing          0        1       0           0
+     walking           9        3      61           0
+     laying_down     682      848     930        5340
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.6860554
+> 
+> 
+> mymodel <- multinom(label~(magnetic_field_X2+magnetic_field_X3+magnetic_field_X4+magnetic_field_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 50064.634557 
+iter  10 value 32783.186678
+iter  20 value 27620.547245
+final  value 27580.270949 
+converged
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (magnetic_field_X2 + magnetic_field_X3 + 
+    magnetic_field_X4 + magnetic_field_X5), data = training, 
+    family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) magnetic_field_X2 magnetic_field_X3 magnetic_field_X4 magnetic_field_X5
+standing     -7.6555350       0.021567567        0.05213150       0.022805480          2.702421
+walking      -4.7998662       0.029038129        0.04675443       0.006090689          1.871539
+laying_down   0.9797036       0.009722259        0.03165372      -0.040009950          0.107419
+
+Std. Errors:
+            (Intercept) magnetic_field_X2 magnetic_field_X3 magnetic_field_X4 magnetic_field_X5
+standing     0.20957906      0.0011716446       0.001645862       0.001524462        0.07384979
+walking      0.13250546      0.0010366001       0.001488795       0.001364258        0.04927379
+laying_down  0.07359411      0.0008073309       0.001204200       0.001041727        0.03042032
+
+Residual Deviance: 55160.54 
+AIC: 55190.54 
+> head(pp <- fitted(mymodel))
+      sitting    standing    walking laying_down
+2  0.09905411 0.006708585 0.02548237   0.8687549
+4  0.02989996 0.379358775 0.32405009   0.2666912
+7  0.02987748 0.087607864 0.14763812   0.7348765
+9  0.08920814 0.004173630 0.01777870   0.8888395
+11 0.04792006 0.172092564 0.30489320   0.4750942
+12 0.08403025 0.011044530 0.04978642   0.8551388
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+        425          66         247        3286        5976 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         375        0      49           1
+     standing          3       35      26           2
+     walking           2       58      70         117
+     laying_down     205      202     309        2570
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.7579523
+> 
+> 
+> mymodel <- multinom(label~(orientation_X2+orientation_X3+orientation_X4+orientation_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 99465.234116 
+iter  10 value 64666.783668
+iter  20 value 45648.526889
+final  value 45630.449385 
+converged
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (orientation_X2 + orientation_X3 + 
+    orientation_X4 + orientation_X5), data = training, family = "binomial", 
+    maxit = 1000)
+
+Coefficients:
+            (Intercept) orientation_X2 orientation_X3 orientation_X4 orientation_X5
+standing     -7.7241883   -0.001731782    -0.01621119   0.0129377982      2.9760464
+walking      -6.6433504    0.007403041    -0.01590225   0.0002782891      2.2836231
+laying_down  -0.1882336    0.002529269    -0.04972476   0.0190248972      0.7553454
+
+Std. Errors:
+            (Intercept) orientation_X2 orientation_X3 orientation_X4 orientation_X5
+standing     0.14778779   0.0002073609   0.0004813201   0.0006948178     0.05162260
+walking      0.09921303   0.0001764530   0.0004225190   0.0006489508     0.03546849
+laying_down  0.05990807   0.0001600725   0.0004150275   0.0006396678     0.02458792
+
+Residual Deviance: 91260.9 
+AIC: 91290.9 
+> head(pp <- fitted(mymodel))
+     sitting   standing    walking laying_down
+1 0.13797251 0.01432562 0.13056534  0.71713653
+2 0.10842345 0.01647016 0.02602973  0.84907666
+3 0.02116945 0.03028488 0.48154124  0.46700443
+4 0.15668013 0.05722858 0.74219510  0.04389618
+5 0.34363947 0.02211372 0.21650209  0.41774472
+7 0.14997693 0.30357662 0.17982417  0.36662227
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+        996         378         663        5914        2049 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         660       49     232          55
+     standing        154      176      48           0
+     walking         118       66     285         194
+     laying_down     206      256     300        5152
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.7889574
+> 
+> 
+> 
+> mymodel <- multinom(label~(rotation_vector_X2+rotation_vector_X3+rotation_vector_X4+rotation_vector_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 99468.006705 
+iter  10 value 42912.919656
+iter  20 value 36199.398678
+iter  30 value 34890.288900
+iter  30 value 34890.288630
+iter  30 value 34890.288630
+final  value 34890.288630 
+converged
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (rotation_vector_X2 + rotation_vector_X3 + 
+    rotation_vector_X4 + rotation_vector_X5), data = training, 
+    family = "binomial", maxit = 1000)
+
+Coefficients:
+            (Intercept) rotation_vector_X2 rotation_vector_X3 rotation_vector_X4 rotation_vector_X5
+standing     -0.9820100         -0.5523118         -2.1860116         0.57906202        -0.05559016
+walking      -0.3328034         -1.4696149         -1.5323194        -0.03162788        -1.06274757
+laying_down  -4.2846340          5.8037142          0.5328815         2.17065589         8.47972996
+
+Std. Errors:
+            (Intercept) rotation_vector_X2 rotation_vector_X3 rotation_vector_X4 rotation_vector_X5
+standing     0.02370726         0.06557122         0.05469763         0.03356823         0.04133007
+walking      0.01828199         0.06049984         0.04773926         0.02934971         0.03737599
+laying_down  0.06836750         0.07466562         0.06145377         0.04149451         0.09234382
+
+Residual Deviance: 69780.58 
+AIC: 69810.58 
+> head(pp <- fitted(mymodel))
+     sitting    standing     walking  laying_down
+1 0.07684321 0.026146007 0.024003753 8.730070e-01
+2 0.02108948 0.015410659 0.008494482 9.550054e-01
+3 0.01204426 0.008312939 0.004273283 9.753695e-01
+4 0.62732080 0.078860389 0.293658748 1.600652e-04
+5 0.29038486 0.116548192 0.141156410 4.519105e-01
+7 0.30050290 0.196249854 0.503223725 2.351973e-05
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+       1193         291         793        5674        2049 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         768       86     307          32
+     standing        150       54      87           0
+     walking         148      295     344           6
+     laying_down      72      112     127        5363
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.8211546
+> 
+
+> mymodel <- multinom(label~(accelerometer_X2+accelerometer_X3+accelerometer_X4+accelerometer_X5),data=training, family="binomial", maxit=1000)
+# weights:  24 (15 variable)
+initial  value 109478.438286 
+iter  10 value 63189.243607
+iter  20 value 46422.233367
+iter  30 value 45376.878366
+iter  40 value 45242.112229
+iter  50 value 45211.373035
+iter  50 value 45211.373010
+iter  50 value 45211.373010
+final  value 45211.373010 
+converged
+> 
+> 
+> summary(mymodel)
+Call:
+multinom(formula = label ~ (accelerometer_X2 + accelerometer_X3 + 
+    accelerometer_X4 + accelerometer_X5), data = training, family = "binomial", 
+    maxit = 1000)
+
+Coefficients:
+            (Intercept) accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5
+standing     -8.5894105       -0.1696126        0.3809115       -0.7146706         4.472432
+walking      -3.2699250       -0.1940345        0.3024249       -0.6539633         2.637340
+laying_down  -0.4145606       -0.2273369        0.7389714       -0.2054462         1.467759
+
+Std. Errors:
+            (Intercept) accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5
+standing      0.5476104      0.005018132      0.005332234      0.009041367       0.18313365
+walking       0.2654852      0.004914768      0.005102797      0.008656333       0.08926953
+laying_down   0.1745044      0.004947124      0.005634917      0.008860301       0.05869554
+
+Residual Deviance: 90422.75 
+AIC: 90452.75 
+> head(pp <- fitted(mymodel))
+      sitting    standing     walking laying_down
+1 0.154126754 0.075062223 0.138937171   0.6318739
+2 0.093729094 0.001926454 0.009502019   0.8948424
+3 0.057599984 0.030860378 0.029073846   0.8824658
+5 0.186739311 0.219746689 0.445443307   0.1480707
+6 0.001621055 0.332763429 0.500241638   0.1653739
+7 0.334654542 0.079516673 0.121175426   0.4646534
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+       1775         249         933        5860        1183 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting        1379       90     290          16
+     standing          0      191      58           0
+     walking          66      275     391         201
+     laying_down     180      300     255        5125
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.8036747
+
+> mymodel <- multinom(label~.,data=training, family="binomial", maxit=1000)
+# weights:  128 (93 variable)
+initial  value 37916.537071 
+iter  10 value 16625.026084
+iter  20 value 13951.037709
+iter  30 value 12347.385338
+iter  40 value 11521.860851
+iter  50 value 9061.951395
+iter  60 value 7275.015123
+iter  70 value 6352.781811
+iter  80 value 6031.113229
+iter  90 value 6022.017066
+iter 100 value 6021.951000
+final  value 6021.944992 
+converged
+> 
+> 
+> summary(mymodel)
+Call:
+multinom(formula = label ~ ., data = training, family = "binomial", 
+    maxit = 1000)
+
+Coefficients:
+            (Intercept) accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5 gravity_X2 gravity_X3
+standing    -0.05426539       -0.1347965        0.2052991      -0.13576863       -0.1942946 -0.4105764  0.2703515
+walking     -0.02682177       -0.2261445        0.2148750      -0.12929554       -0.1659613 -0.3498900  0.2618362
+laying_down -0.22725460       -0.1692096        0.4726328       0.05859231       -0.2804377 -0.5134679  0.5280201
+             gravity_X4 gravity_X5 gyroscope_X2 gyroscope_X3 gyroscope_X4 gyroscope_X5 linear_acceleration_X2
+standing    -0.26600381 -0.1942946  -0.02692748   -0.1286745   -0.3013829   -0.1942946              0.2760454
+walking     -0.21824866 -0.1659613  -0.04428538   -0.3290083   -0.2833379   -0.1659613              0.1237546
+laying_down -0.03656571 -0.2804377   0.08999298   -0.0870982   -0.2805971   -0.2804377              0.3441938
+            linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5 magnetic_field_X2 magnetic_field_X3
+standing               -0.06567932             0.13065512             -0.1942946       -0.03850416        0.02722171
+walking                -0.04756326             0.09015733             -0.1659613       -0.04762191        0.03113763
+laying_down            -0.05558299             0.09527380             -0.2804377       -0.12417183        0.03791736
+            magnetic_field_X4 magnetic_field_X5 orientation_X2 orientation_X3 orientation_X4 orientation_X5
+standing          0.017256213         3.8885967   -0.004665695   -0.002046888    -0.05800938     -1.3168265
+walking          -0.004257503        -2.1692615    0.011479026    0.001226848    -0.06151303      3.9488662
+laying_down       0.053102476         0.3054761    0.013223968    0.020877120    -0.01452818      0.3549455
+            rotation_vector_X2 rotation_vector_X3 rotation_vector_X4 rotation_vector_X5 rotation_vector_X6
+standing            -0.6558461           1.340212          1.1562949        -0.11742792                  0
+walking             -0.9172012           1.025850         -0.8454819         0.01601508                  0
+laying_down          3.7917829          -1.180609          1.9630229         9.32488331                  0
+            rotation_vector_X7
+standing           -0.16279618
+walking            -0.08046532
+laying_down        -0.68176380
+
+Std. Errors:
+            (Intercept) accelerometer_X2 accelerometer_X3 accelerometer_X4 accelerometer_X5 gravity_X2 gravity_X3
+standing      0.1433633       0.02561902       0.01775270       0.02008180       0.12564763 0.03748321 0.02263871
+walking       0.1085164       0.02293312       0.01563970       0.01710682       0.09523668 0.03230072 0.02008514
+laying_down   0.1221627       0.03103257       0.02287948       0.02443891       0.10573667 0.04557910 0.02834957
+            gravity_X4 gravity_X5 gyroscope_X2 gyroscope_X3 gyroscope_X4 gyroscope_X5 linear_acceleration_X2
+standing    0.02460126 0.12564763   0.06559922    0.1138459   0.08911792   0.12564763             0.03733815
+walking     0.02119146 0.09523668   0.05760451    0.1008731   0.07952238   0.09523668             0.03281761
+laying_down 0.03002753 0.10573667   0.08081124    0.1686822   0.10618169   0.10573667             0.04458383
+            linear_acceleration_X3 linear_acceleration_X4 linear_acceleration_X5 magnetic_field_X2 magnetic_field_X3
+standing                0.02739624             0.03394352             0.12564763       0.005650082       0.004276314
+walking                 0.02418230             0.02935122             0.09523668       0.004571519       0.003144724
+laying_down             0.03267280             0.04091220             0.10573667       0.008113628       0.005437804
+            magnetic_field_X4 magnetic_field_X5 orientation_X2 orientation_X3 orientation_X4 orientation_X5
+standing          0.004760179        0.07526203   0.0009169208    0.002424644    0.007742160     0.07526203
+walking           0.003968020        0.05575503   0.0006997698    0.002291641    0.006859565     0.05575906
+laying_down       0.007382327        0.06828360   0.0009445894    0.003027231    0.009024547     0.06828428
+            rotation_vector_X2 rotation_vector_X3 rotation_vector_X4 rotation_vector_X5 rotation_vector_X6
+standing             0.2375533          0.2345794          0.1645504          0.1557089       2.435082e-13
+walking              0.2249644          0.2094913          0.1139040          0.1386545                NaN
+laying_down          0.4787930          0.4125077          0.2344728          0.3152038       0.000000e+00
+            rotation_vector_X7
+standing             0.4300898
+walking              0.3255492
+laying_down          0.3664881
+
+Residual Deviance: 12043.89 
+AIC: 12199.89 
+Warning message:
+In sqrt(diag(vc)) : NaNs produced
+> head(pp <- fitted(mymodel))
+        sitting    standing    walking  laying_down
+2  0.0006038796 0.001436062 0.00275185 9.952082e-01
+7  0.2411877279 0.509841636 0.24894489 2.574695e-05
+9  0.0004690840 0.002579887 0.00350494 9.934461e-01
+13 0.0004378422 0.002663700 0.00360759 9.932909e-01
+15 0.0014163412 0.164068916 0.60293865 2.315761e-01
+18 0.5631433563 0.002378883 0.43442720 5.056024e-05
+> predicted_scores <- predict (mymodel, test, "probs")
+> predicted_labels <- predict (mymodel, test)
+> summary(predicted_labels)
+    sitting    standing     walking laying_down        NA's 
+        205         104         352        2419        6920 
+> 
+> table(predicted_labels, test$label)
+                
+predicted_labels sitting standing walking laying_down
+     sitting         127       48      28           2
+     standing          7       69      28           0
+     walking          30       35     283           4
+     laying_down       7       34      16        2362
+> mean(as.character(predicted_labels) == as.character(test$label), na.rm = TRUE)
+[1] 0.9224026
